@@ -18,12 +18,44 @@ class Department {
   }
 }
 
-const department = new Department("d1", "IT");
+class ITDepartment extends Department {
+  admins: string[];
+  constructor(id: string, admins: string[]) {
+    super(id, "IT");
+    this.admins = admins;
+  }
+}
 
+class AccountingDepartment extends Department {
+  constructor(id: string, private reports: string[]) {
+    super(id, "Accounting");
+  }
+
+  addReport(text: string) {
+    this.reports.push(text);
+  }
+
+  printReports() {
+    console.log(this.reports);
+  }
+}
+
+const department = new Department("d1", "IT");
 department.addEmployee("ABC");
 department.addEmployee("DEF");
 department.describe();
 department.printEmployeeInformation();
+
+const itDepartment = new ITDepartment("d2", ["Mario"]);
+itDepartment.addEmployee("123");
+itDepartment.addEmployee("456");
+itDepartment.describe();
+itDepartment.name = "NEW NAME";
+itDepartment.printEmployeeInformation();
+
+const accountingDepartment = new AccountingDepartment("d3", []);
+accountingDepartment.addReport("Something went wrong......");
+accountingDepartment.printReports();
 
 //To handle these scenarios, we add the type of this keyword in the describe function in the class
 //If we add the name property, it works well - compiles down to old JS function type compilation
