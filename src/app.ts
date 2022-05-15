@@ -1,14 +1,11 @@
 class Department {
-  name: string;
   private employees: string[] = [];
 
-  constructor(n: string) {
-    this.name = n;
-  }
+  constructor(private readonly id: string, public name: string) {}
 
   //To ensure that this function can only be called from an instance of class Department
   describe(this: Department) {
-    console.log("Department: " + this.name);
+    console.log(`Department ${this.name} has the id ${this.id}`);
   }
 
   addEmployee(employee: string) {
@@ -21,7 +18,7 @@ class Department {
   }
 }
 
-const department = new Department("IT");
+const department = new Department("d1", "IT");
 
 department.addEmployee("ABC");
 department.addEmployee("DEF");
