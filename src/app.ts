@@ -1,5 +1,5 @@
 class Department {
-  private employees: string[] = [];
+  protected employees: string[] = [];
 
   constructor(private readonly id: string, public name: string) {}
 
@@ -31,6 +31,13 @@ class AccountingDepartment extends Department {
     super(id, "Accounting");
   }
 
+  addEmployee(name: string) {
+    if (name === "Ghost") {
+      return;
+    }
+    this.employees.push(name);
+  }
+
   addReport(text: string) {
     this.reports.push(text);
   }
@@ -56,6 +63,7 @@ itDepartment.printEmployeeInformation();
 const accountingDepartment = new AccountingDepartment("d3", []);
 accountingDepartment.addReport("Something went wrong......");
 accountingDepartment.printReports();
+accountingDepartment.addEmployee("Ghost");
 
 //To handle these scenarios, we add the type of this keyword in the describe function in the class
 //If we add the name property, it works well - compiles down to old JS function type compilation
