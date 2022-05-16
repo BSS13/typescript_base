@@ -3,6 +3,10 @@ class Department {
 
   constructor(private readonly id: string, public name: string) {}
 
+  static createEmployee(name: string) {
+    return { name: name };
+  }
+
   //To ensure that this function can only be called from an instance of class Department
   describe(this: Department) {
     console.log(`Department ${this.name} has the id ${this.id}`);
