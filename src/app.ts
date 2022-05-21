@@ -10,6 +10,7 @@ console.log(mergedObj.name);
 const mergedObj1 = merge({ name: "Bob" }, { age: 23 });
 console.log(mergedObj1);
 
+//Lengthy
 interface Lengthy {
   length: number;
 }
@@ -25,3 +26,13 @@ function countAndDescribe<T extends Lengthy>(element: T): [T, string] {
 }
 
 console.log(countAndDescribe("Hi there!"));
+
+//Extract and Convert
+function extractAndConvert<T extends object, U extends keyof T>(
+  obj: T,
+  key: U
+) {
+  return obj[key];
+}
+
+extractAndConvert({ name: "Bob" }, "name");
