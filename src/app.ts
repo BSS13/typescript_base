@@ -1,15 +1,11 @@
-console.log("Generics");
+//Generic Function with Constraint handling
+function merge<T extends object, U extends object>(objA: T, objB: U) {
+  return Object.assign(objA, objB);
+}
 
-//Array Generic Type
-const names: Array<string> = ["SpiderMan", "Mario"];
+console.log(merge({ name: "Mario" }, { age: 25 }));
+const mergedObj = merge({ name: "Mario" }, { age: 25 });
+console.log(mergedObj.name);
 
-//Promise Generic
-const promise: Promise<string> = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("This is done!");
-  }, 2000);
-});
-
-promise.then((data) => {
-  data.split(" ");
-});
+const mergedObj1 = merge({ name: "Bob" }, { age: 23 });
+console.log(mergedObj1);
