@@ -14,3 +14,4 @@ to make them ready to use as per project
 7. Union Aliases
 8. Analytics
 9. Generics
+10. Decorators
