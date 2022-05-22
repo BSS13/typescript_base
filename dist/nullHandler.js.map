@@ -1,0 +1,1 @@
+{"version":3,"file":"nullHandler.js","sourceRoot":"","sources":["../src/nullHandler.ts"],"names":[],"mappings":";AAAA,MAAM,WAAW,GAAG,QAAQ,CAAC,aAAa,CAAC,QAAQ,CAAC,CAAC;AAErD,SAAS,YAAY;IACnB,OAAO,CAAC,GAAG,CAAC,gBAAgB,CAAC,CAAC;AAChC,CAAC;AACD,IAAI,WAAW,EAAE;IACf,WAAW,CAAC,gBAAgB,CAAC,OAAO,EAAE,YAAY,CAAC,CAAC;CACrD"}
