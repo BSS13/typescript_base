@@ -15,3 +15,4 @@ to make them ready to use as per project
 8. Analytics
 9. Generics
 10. Decorators
+11. Validators with Decorators
