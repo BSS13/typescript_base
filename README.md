@@ -16,4 +16,4 @@ to make them ready to use as per project
 9. Generics
 10. Decorators
 11. Validators with Decorators
-12. Module Manager
+12. Module Manager - ES6 packages, Imports and exports
