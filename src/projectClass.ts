@@ -43,6 +43,17 @@ class ProjectItem
   }
 }
 
+// Project State Management
+type Listener<T> = (items: T[]) => void;
+
+class State<T> {
+  protected listeners: Listener<T>[] = [];
+
+  addListener(listenerFn: Listener<T>) {
+    this.listeners.push(listenerFn);
+  }
+}
+
 // ProjectList Class
 class ProjectList
   extends Component<HTMLDivElement, HTMLElement>
