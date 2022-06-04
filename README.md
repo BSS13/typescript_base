@@ -17,3 +17,4 @@ to make them ready to use as per project
 10. Decorators
 11. Validators with Decorators
 12. Module Manager - ES6 packages, Imports and exports
+13. State Management
